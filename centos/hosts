@@ -11,7 +11,7 @@ kubernetes_worker_nodes
 kubernetes_master_nodes
 
 [kubernetes:vars]
-ansible_password=Test!@#$%12345
+ansible_password=testadmin
 ansible_ssh_user=testadmin
 
 

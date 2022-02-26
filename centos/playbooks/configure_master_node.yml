@@ -11,6 +11,12 @@
     shell: kubeadm reset -f
     register: output
 
+  - name: Enable / Start kubelet Service
+    service:
+      name: kubelet
+      state: started
+      enabled: yes  
+
   - name: Initializing Kubernetes cluster
     shell: kubeadm init --apiserver-advertise-address {{ad_addr}} --pod-network-cidr={{cidr_v}}
     register: output
